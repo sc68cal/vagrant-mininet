@@ -35,6 +35,7 @@ Vagrant.configure("2") do |config|
 
   ## Provisioning
   config.vm.provision :shell, :inline => $init
+  config.vm.provision :shell, :inline => "sudo locale-gen #{ENV['LANG']}"
 
   ## SSH config
   config.ssh.forward_x11 = true
