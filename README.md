@@ -1,15 +1,20 @@
 # vagrant-mininet
 
-This Vagrantfile tries to be an all-inclusive script to provide you
-OpenFlow playground in the VM.
+Vagrant recipe that automates [Mininet's Native Installation from
+Source option][NativeInstall], in order to complete the [OpenFlow
+Tutorial][OpenFlowTutorial].
 
-Included tools are:
+# Why
 
-- Mininet
-- POX
-- Wireshark dissector
-- Trema
-- Flowvisor
+Because the images that Mininet has on their download page are broken.
+
+* 2.1.0 has a broken VMDK image, and will not import into Virtualbox
+* 2.0.0 boots in VirtualBox, but requires manual set up for the second
+  interface - which Vagrant does for you. So why not automate the whole
+  thing?
+
+[NativeInstall]: http://mininet.org/download/
+[OpenFlowTutorial]: http
 
 ## Usage
 
